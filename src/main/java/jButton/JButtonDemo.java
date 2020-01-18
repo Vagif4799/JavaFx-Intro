@@ -1,8 +1,12 @@
 package jButton;
 import javax.swing.*;
 import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
-public class JButtonDemo {
+public class JButtonDemo implements ActionListener {
+
+    JLabel jLabel;
 
     public JButtonDemo() {
 
@@ -11,11 +15,13 @@ public class JButtonDemo {
         jFrame.setSize(300, 600);
         jFrame.setDefaultCloseOperation(jFrame.EXIT_ON_CLOSE);
 
-        JLabel jLabel = new JLabel("First Page");
+        jLabel = new JLabel("Press Button");
         jFrame.add(jLabel);
 
         JButton up = new JButton("up");
         JButton down = new JButton("down");
+        up.addActionListener(this);
+        down.addActionListener(this);
         jFrame.add(up);
         jFrame.add(down);
 
@@ -34,4 +40,14 @@ public class JButtonDemo {
 
     }
 
+    @Override
+    public void actionPerformed(ActionEvent e) {
+
+        if (e.getActionCommand().equals("up")) {
+            jLabel.setText("Up Button Pressed");
+        } else {
+            jLabel.setText("Down Button Pressed");
+        }
+
+    }
 }
