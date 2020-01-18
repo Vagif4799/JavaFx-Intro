@@ -1,4 +1,4 @@
-package step0;
+package jFrame;
 import javax.swing.*;
 
 public class Application {
