@@ -10,7 +10,7 @@ public class JButtonDemo implements ActionListener {
 
     public JButtonDemo() {
 
-        JFrame jFrame = new JFrame("Vagif'f Button View");
+        JFrame jFrame = new JFrame("Vagif's Button View");
         jFrame.setLayout(new FlowLayout());
         jFrame.setSize(300, 600);
         jFrame.setDefaultCloseOperation(jFrame.EXIT_ON_CLOSE);
